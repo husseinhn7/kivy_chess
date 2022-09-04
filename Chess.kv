@@ -1,0 +1,657 @@
+#:kivy 1.0.0
+#:import Clipboard kivy.core.clipboard.Clipboard
+#:import Invtation Chess.Invtation
+#:import Clock kivy.clock.Clock
+#:import M Chess.M
+<M>:
+    canvas.before:
+        Color:
+            rgba: (0,0,0,.75 )
+        Rectangle:
+            
+            pos: self.pos
+            size: self.size
+            #source: "bg2.jpg"
+    
+    BoxLayout:
+        BoxLayout:
+            orientation : "vertical"
+            BoxLayout:
+                size_hint: None, 1
+                width: 560
+                MDIcon:
+                    text:'label 1 '
+                    size_hint: None, 1
+                    width: 70
+                    icon:'account'
+                    halign: "center"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    text:'name'
+                    size_hint: None, 1
+                    width: 100
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    id: time
+                    text:'   '
+                    icon:'account'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    id: time
+                    size_hint: None, 1
+                    width: 100
+                    text:'clock'
+                    icon:'account'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+
+
+             
+            Image:
+                source: 'board1.png'
+                size_hint: None, None
+                size: 560,560
+                    
+            
+                
+                    
+            
+            
+    
+            
+            BoxLayout:
+                size_hint: None, 1
+                width: 560
+                MDIcon:
+                    text:'label 1 '
+                    size_hint: None, 1
+                    width: 70
+                    icon:'account'
+                    halign: "center"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    id:namel
+                    text:root.nam
+                    size_hint: None, 1
+                    width: 100
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    id: time
+                    text:'   '
+                    icon:'account'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDLabel:
+                    id: time
+                    size_hint: None, 1
+                    width: 100
+                    text:'clock'
+                    icon:'account'
+                    theme_text_color: "Custom"
+                    text_color: 0, 0, 0, 1
+                MDRaisedButton:
+                    text: 'move'
+                    on_press: root.change()
+                    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:0
+        y:140
+    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:70
+        y:140
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:140
+        y:140
+    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:210
+        y:140
+    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:280
+        y:140
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:350
+        y:140
+    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:420
+        y:140
+    
+    Piece:
+        name:'pawn' 
+        colo: 'W'
+        source:'Wpawn.png'
+        x:490
+        y:140
+    Piece:
+        name:'roock' 
+        colo: 'W'
+        source:'Wcastle.png'
+        x:0
+        y:70
+    Piece:
+        name:'knight' 
+        colo: 'W'
+        source:'Whours.png'
+        x:70
+        y:70
+    Piece:
+        name:'bishop' 
+        colo: 'W'
+        source:'Wbishop.png'
+        x:140
+        y:70
+    Piece:
+        name:'king' 
+        colo: 'W'
+        source:'Wking.png'
+        x:210
+        y:70
+    Piece:
+        name:'queen' 
+        colo: 'W'
+        source:'Wqueen.png'
+        x:280
+        y:70
+    Piece:
+        name:'bishop' 
+        colo: 'W'
+        source:'Wbishop.png'
+        x:350
+        y:70
+    Piece:
+        name:'knight' 
+        colo: 'W'
+        source:'Whours.png'
+        x:420
+        y:70
+    Piece:
+        name:'roock' 
+        colo: 'W'
+        source:'Wcastle.png'
+        x:490
+        y:70
+    
+    
+
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:0
+        y:490
+    
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:70
+        y:490
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:140
+        y:490
+    
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:210
+        y:490
+    
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:280
+        y:490
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:350
+        y:490
+    
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:420
+        y:490
+    
+    Piece:
+        name:'pawn' 
+        colo: 'B'
+        source:'Bpawn.png'
+        x:490
+        y:490
+    Piece:
+        name:'roock' 
+        colo: 'B'
+        source:'Bcastle.png'
+        x:0
+        y:560
+    Piece:
+        name:'knight' 
+        colo: 'B'
+        source:'Bhours.png'
+        x:70
+        y:560
+    Piece:
+        name:'bishop' 
+        colo: 'B'
+        source:'Bbishop.png'
+        x:140
+        y:560
+    Piece:
+        name:'king' 
+        colo: 'B'
+        source:'Bking.png'
+        x:210
+        y:560
+    Piece:
+        name:'queen' 
+        colo: 'B'
+        source:'Bqueen.png'
+        x:280
+        y:560
+    Piece:
+        name:'bishop' 
+        colo: 'B'
+        source:'Bbishop.png'
+        x:350
+        y:560
+    Piece:
+        name:'knight' 
+        colo: 'B'
+        source:'Bhours.png'
+        x:420
+        y:560
+    Piece:
+        name:'roock' 
+        colo: 'B'
+        source:'Bcastle.png'
+        x:490
+        y:560
+    
+        
+
+
+
+
+        
+
+
+<GameScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "3292221.jpg"
+        
+    BoxLayout:
+        canvas.before:
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(40, 40), (40, 40), (40, 40), (40, 40)]
+                source: "pn.png"
+        size_hint: None,None
+        size:300,500
+        pos_hint:{'center_x':.5,'center_y':.5}
+        elevation:20
+        pading:25
+        spacing:25
+        orientation : "vertical"
+        BoxLayout:
+            #pos_hint:{'x':.1,'y':.4}
+            
+            orientation : "vertical"
+            MDLabel:
+                halign: "center"
+                font_size: 40
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'Welcome'
+            MDLabel:
+                halign: "center"
+                font_size: 20
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'please select game mode'
+            MDTextFieldRound:
+                pos_hint:{'center_x':.5,'center_y':.5}
+                halign: "center"
+                hint_text: 'please enter your name'  
+                size_hint:None,None
+                normal_color:0, 0, 0, .4
+                color_active: 0, 0, 0, .7
+                size:250,100
+                name: 'ti'
+                id:tx
+            
+            BoxLayout:
+                pos_hint:{'center_x':.5,'center_y':.5}
+                MDLabel:
+                    
+                    text:'play as guest'
+                    theme_text_color: "Custom"
+                    halign: "center"
+                Check:
+                    active: True
+                    on_press: root.Guest()
+            BoxLayout:
+                
+                MDLabel:
+                    halign: "center"
+                    padding_y:100
+                    
+                    text:'play as host'
+                    theme_text_color: "Custom"
+                Check:
+                    active: True
+                    on_press: root.Host()
+            BoxLayout:
+                pos_hint:{'center_x':.5,'center_y':.5}
+                MDLabel:
+                    
+                    text:'play on local network'
+                    theme_text_color: "Custom"
+                    halign: "center"
+                Check2:
+                    id:ch1
+                    on_press: root.offLine()
+                    on_press :ch2.active=False
+            BoxLayout:
+                
+                MDLabel:
+                    halign: "center"
+                    padding_y:100
+                    text:'play online'
+                    theme_text_color: "Custom"
+                Check2:
+                    id:ch2
+                    active: True
+                    on_press: root.onLine()
+                    on_press :ch1.active=False
+            BoxLayout:
+
+                padding_y:100
+                spacing:2
+                Widget:
+                    size_hint_x:None
+                    width:20
+
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text:'submit'
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: root.Create()
+                    
+                Widget:
+                    size_hint_x:None
+                    width:35
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text: 'Back to menu'
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: root.manager.current = 'menu'
+            Widget:
+                size_hint_y:None
+                height:40
+
+            
+                    
+                    
+
+                
+<ConnetionScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "3292221.jpg"
+        
+    BoxLayout:
+        canvas.before:
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(40, 40), (40, 40), (40, 40), (40, 40)]
+                source: "pn.png"
+        size_hint: None,None
+        size:300,300
+        pos_hint:{'center_x':.5,'center_y':.5}
+        elevation:20
+        pading:25
+        spacing:25
+        orientation : "vertical"
+        BoxLayout:
+            #pos_hint:{'x':.1,'y':.4}
+            
+            orientation : "vertical"
+            MDLabel:
+                halign: "center"
+                font_size: 40
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'Welcome'
+            MDLabel:
+                halign: "center"
+                font_size: 20
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'please enter invtaion code'
+            MDTextFieldRound:
+                pos_hint:{'center_x':.5,'center_y':.5}
+                halign: "center"
+                hint_text: 'inv code'  
+                size_hint:None,None
+                normal_color:0, 0, 0, .4
+                color_active: 0, 0, 0, .7
+                size:250,100
+                name: 'ti'
+                id:tx
+            
+            BoxLayout:
+                pos_hint:{'center_x':.5,'center_y':.5}
+                Widget:
+                    size_hint_x:None
+                    width:100
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text: '   submit   '
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: root.manager.current = 'guest'
+                    on_press: root.conk()
+            Widget:
+                size_hint_y:None
+                height:40
+
+            
+                    
+
+
+
+
+
+    
+
+<GuestScreen>:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "3292221.jpg"
+    BoxLayout:
+        canvas.before:
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(40, 40), (40, 40), (40, 40), (40, 40)]
+                source: "pn.png"
+        size_hint: None,None
+        size:300,300
+        pos_hint:{'center_x':.5,'center_y':.5}
+        elevation:20
+        pading:25
+        spacing:25
+        orientation : "vertical"
+        BoxLayout:
+            #pos_hint:{'x':.1,'y':.4}
+            
+            orientation : "vertical"
+            MDLabel:
+                halign: "center"
+                font_size: 40
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'Welcome'
+            MDLabel:
+                halign: "center"
+                font_size: 20
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'waiting for connection'
+
+            
+
+
+
+
+
+<Invtation>:
+    id:kk
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "3292221.jpg"
+    BoxLayout:
+        canvas.before:
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [(40, 40), (40, 40), (40, 40), (40, 40)]
+                source: "pn.png"
+        size_hint: None,None
+        size:300,300
+        pos_hint:{'center_x':.5,'center_y':.5}
+        elevation:20
+        pading:25
+        spacing:25
+        orientation : "vertical"
+        BoxLayout:
+            #pos_hint:{'x':.1,'y':.4}
+            id:box
+            orientation : "vertical"
+            Widget:
+                size_hint_y:None
+                height:60
+            MDLabel:
+                halign: "center"
+                font_size: 20
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : 'please share this inv link with your frind'
+            MDLabel:
+                halign: "center"
+                id: invt
+                font_size: 20
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                text : app.getip()
+            BoxLayout:
+                padding_y:100
+                spacing:2
+                Widget:
+                    size_hint_x:None
+                    width:15
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text:'copy code'
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: Clipboard.copy(invt.text)
+                
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text: 'back'
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: root.manager.current = 'settings'
+                
+                MDRoundFlatButton:
+                    line_color:0,0,0,1
+                    text: 'next'
+                    text_color:0,0,0,1
+                    md_bg_color:0,0,0,.4
+                    on_press: root.manager.current = 'guest'
+                    on_press: root.chang_on_connect()
+
+            Widget:
+                size_hint_y:None
+                height:60
+
+
+
+
+
+
+<Piece>:
+    # Define the properties for the DragLabel
+    size_hint:None,None
+    size:70,70
+
+<Check@MDCheckbox+Label>:
+    group: 'group'
+
+<Check2@MDCheckbox+Label>:
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
